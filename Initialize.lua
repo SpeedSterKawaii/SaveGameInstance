@@ -11,6 +11,14 @@ Thank you evaera for some help.
 Thank you validark for some help.
 ]]
 
+--[[
+This SaveGameInstance [init] script has not been obfuscated to
+throw less impact at the exploit or user's FPS or graphics.
+
+The original SaveGameInstance module has been obfuscated to
+avoid fake copies with harmful code/scripts injected inside of them.
+]]
+
 -- TRUE = yes, FALSE = no
 local SaveExplorer = true -- Set to TRUE to save EVERYTHING
 local SaveMapOnly = false 
