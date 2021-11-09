@@ -19,6 +19,18 @@ The original SaveGameInstance module has been obfuscated to
 avoid fake copies with harmful code/scripts injected inside of them.
 ]]
 
+--[[
+Required Exploit Functions to Run:
+writefile/readfile
+getgenv,setfenv
+Instance.new()
+loadstring()
+hookfunction
+bit library
+mouse library
+keyboard library
+]]
+
 -- TRUE = yes, FALSE = no
 local SaveExplorer = true -- Set to TRUE to save EVERYTHING
 local SaveMapOnly = false 
@@ -36,7 +48,7 @@ local LoadMessage = "Thanks to SpeedSterKawaii for this SaveInstance Script!"
 local ErrorMessage = "Oops! A script error has occurred and can't proceed!"
 local DoneMessage = "Successfully saved game! Credits to SpeedSterKawaii."
 
--- PUBLIC FUNCTIONS (DO NOT MODIFY)
+-- PUBLIC FUNCTION(S) (DO NOT MODIFY)
 local function PrintOutMessage(msg)
   msg = LoadMessage
   if (msg == "") then
@@ -47,4 +59,28 @@ local function PrintOutMessage(msg)
     msg = ""
     LoadMessage = ""
    end
+end
+
+local function CheckExploitFunctions()
+  local Passed = 0 -- Need at least 7
+  if writefile then
+    Passed = Passed + 1
+    elseif SGI_FUNC then
+    Passed = Passed + 1
+        elseif readfile then
+    Passed = Passed + 1
+          elseif getfenv then
+    Passed = Passed + 1
+            elseif setfenv then
+    Passed = Passed + 1
+              elseif loadstring then
+    Passed = Passed + 1
+                elseif HttpGet then
+    Passed = Passed + 1
+    else
+    warn(ErrorMessage)
+    Passed = 0
+   end
+  
+   print("You got "..Passed.." out of 7")
 end
