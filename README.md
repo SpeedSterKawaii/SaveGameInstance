@@ -27,4 +27,4 @@ end
 ```
 
 **Might not save every instance, not a decompiler! (depend on exploit)**
-***You may implant this script within your exploit, but give credits.***
+- ***You may implant this script within your exploit, but give credits.***
