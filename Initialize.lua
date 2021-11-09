@@ -43,7 +43,7 @@ local function PrintOutMessage(msg)
     warn("Error occurred, no message inserted inside 'LoadMessage'!")
     else
     print(LoadMessage)
-    wait(1)
+    wait(0.5)
     msg = ""
     LoadMessage = ""
    end
