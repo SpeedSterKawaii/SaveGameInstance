@@ -83,4 +83,8 @@ local function CheckExploitFunctions() -- If you have all of the functions but i
    end
   
    print("You got "..Passed.." out of 7")
+  if Passed == 0 then print("") else Passed = 0 
+  end
 end
+
+-- Run the Save Game Instance Module:
