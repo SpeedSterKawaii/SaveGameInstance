@@ -7,7 +7,7 @@ Saves certain parts of the game such as **workspace, lighting, starterpack or te
 - info,print,warn
 - Instance.new()
 - Full lua execution
-- exploit detection func:
+- Needs exploit detection.
 ```cpp
 static int detect_exploit(int gay)
 {
@@ -16,4 +16,15 @@ if (gay == NULL){gay = 1;}
 return 0;
 }
 ```
-(reg the func)
+(register and make it named **SGI_FUNC**)
+**TO SEE IF YOUR "detect_exploit" function works:**
+```lua
+if SGI_FUNC then
+print("passed") --good
+else
+warn("failed") --messed up something
+end
+```
+
+**Might not save every instance, not a decompiler! (depend on exploit)**
+***You may implant this script within your exploit, but give credits.***
