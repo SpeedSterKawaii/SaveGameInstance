@@ -41,3 +41,5 @@ local SaveScripts = false --no decompiler so no point of true or false.
 
 --some code here lol
 ```
+
+Initialaze.lua has everything.
