@@ -61,7 +61,7 @@ local function PrintOutMessage(msg)
    end
 end
 
-local function CheckExploitFunctions()
+local function CheckExploitFunctions() -- If you have all of the functions but it still shows an error, mark this function as a comment.
   local Passed = 0 -- Need at least 7
   if writefile then
     Passed = Passed + 1
